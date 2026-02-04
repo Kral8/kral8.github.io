@@ -13,13 +13,6 @@
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .btn-premium { background: linear-gradient(45deg, #00ffcc, #0099ff); color: black; font-weight: bold; transition: 0.3s; }
         .btn-premium:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 255, 204, 0.3); }
-        
-        /* Whitepaper Modal Styles */
-        #wpModal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); overflow-y: auto; }
-        .wp-content { background: #0a0a0a; border: 1px solid #333; margin: 5% auto; padding: 30px; width: 90%; max-width: 800px; border-radius: 30px; line-height: 1.6; }
-        .wp-content h2 { color: #00ffcc; font-weight: 900; margin-top: 25px; font-size: 1.5rem; }
-        .wp-content h3 { color: #0099ff; font-weight: bold; margin-top: 20px; }
-        .wp-content p { color: #ccc; margin-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -28,7 +21,10 @@
         <div class="text-2xl font-black neon-text tracking-tighter">BITRIUM</div>
         
         <div class="flex items-center gap-2 md:gap-4">
-            <button onclick="openWP()" class="text-[10px] md:text-xs font-bold border border-zinc-700 px-2 py-2 rounded-lg hover:border-cyan-500 transition">WHITEPAPER</button>
+            <a href="whitepaper.html" class="text-[10px] md:text-xs font-bold border border-zinc-700 px-3 py-2 rounded-lg hover:border-cyan-500 transition tracking-widest text-center">
+                WHITEPAPER
+            </a>
+
             <select id="langSwitcher" class="bg-black border border-zinc-700 text-white text-xs md:text-sm rounded-lg p-2 outline-none focus:border-cyan-500">
                 <option value="en">English</option>
                 <option value="ru">Русский</option>
@@ -56,18 +52,6 @@
         </a>
     </section>
 
-    <div id="wpModal">
-        <div class="wp-content">
-            <div class="flex justify-between items-center mb-6">
-                <span class="text-cyan-400 font-bold tracking-widest">BITRIUM WHITEPAPER</span>
-                <button onclick="closeWP()" class="text-white text-3xl hover:text-cyan-400 transition">&times;</button>
-            </div>
-            <div id="wpBody">
-                </div>
-            <button onclick="closeWP()" class="mt-8 w-full py-4 glass rounded-xl font-bold hover:bg-white/5 transition">CLOSE</button>
-        </div>
-    </div>
-
     <section class="max-w-6xl mx-auto py-20 px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="glass p-8 rounded-3xl">
             <i class="fas fa-microchip text-3xl text-cyan-400 mb-4"></i>
@@ -94,8 +78,7 @@
                 btnDownload: "DOWNLOAD APK",
                 feat1Title: "Eco-Mining", feat1Desc: "No battery drain. No overheating. Only pure cloud power.",
                 feat2Title: "Community", feat2Desc: "Get +0.10x boost for every friend you invite to the network.",
-                feat3Title: "Secure Wallet", feat3Desc: "Manage your assets with top-tier security protocols.",
-                wp: "<h2>1. PHILOSOPHY</h2><p>Bitrium is a digital revolution. We bring blockchain power to every smartphone node.</p><h2>2. INFRASTRUCTURE</h2><p>Wallet, Pay Gateway, and Decentralized Cloud storage.</p><h3>ROADMAP Q4</h3><p>Listing on Tier-1 exchanges (ByBit, OKX).</p>"
+                feat3Title: "Secure Wallet", feat3Desc: "Manage your assets with top-tier security protocols."
             },
             ru: {
                 heroTitle: "МАЙНИНГ <br><span class='text-cyan-400'>БУДУЩЕГО</span>",
@@ -103,8 +86,7 @@
                 btnDownload: "СКАЧАТЬ APK",
                 feat1Title: "Эко-Майнинг", feat1Desc: "Нет разряда батареи. Нет перегрева. Только облачная мощь.",
                 feat2Title: "Сообщество", feat2Desc: "Получи +0.10x буст за каждого друга, приглашенного в сеть.",
-                feat3Title: "Кошелек", feat3Desc: "Управляй активами с протоколами защиты высшего уровня.",
-                wp: "<h2>1. ФИЛОСОФИЯ</h2><p>Bitrium — это цифровая революция. Смартфон становится узлом глобальной сети.</p><h2>2. ИНФРАСТРУКТУРА</h2><p>Кошелек, платежный шлюз и облачное хранилище.</p><h3>ПЛАН Q4</h3><p>Листинг на Tier-1 биржах (ByBit, OKX).</p>"
+                feat3Title: "Кошелек", feat3Desc: "Управляй активами с протоколами защиты высшего уровня."
             },
             tr: {
                 heroTitle: "GELECEĞİ <br><span class='text-cyan-400'>KAZIN</span>",
@@ -112,8 +94,7 @@
                 btnDownload: "APK İNDİR",
                 feat1Title: "Eko-Madencilik", feat1Desc: "Pil tüketimi yok. Isınma yok. Sadece bulut gücü.",
                 feat2Title: "Topluluk", feat2Desc: "Ağa davet ettiğiniz her arkadaş için +0.10x bonus kazanın.",
-                feat3Title: "Güvenli Cüzdan", feat3Desc: "Varlıklarınızı en üst düzey güvenlik protokolleriyle yönetin.",
-                wp: "<h2>1. FELSEFE</h2><p>Bitrium bir dijital devrimdir. Akıllı telefonları küresel ağ düğümlerine dönüştürüyoruz.</p><h2>2. ALTYAPI</h2><p>Cüzdan, Ödeme Geçidi ve Merkeziyetsiz Bulut.</p><h3>YOL HARİTASI Q4</h3><p>Tier-1 borsalarda listeleme (ByBit, OKX).</p>"
+                feat3Title: "Güvenli Cüzdan", feat3Desc: "Varlıklarınızı en üst düzey güvenlik protokolleriyle yönetin."
             },
             zh: {
                 heroTitle: "挖掘<br><span class='text-cyan-400'>未来</span>",
@@ -121,8 +102,7 @@
                 btnDownload: "下载 APK",
                 feat1Title: "生态挖矿", feat1Desc: "不耗电。不发热。纯净云算力。",
                 feat2Title: "社区", feat2Desc: "每邀请一位朋友，矿速增加 +0.10x。",
-                feat3Title: "安全钱包", feat3Desc: "使用顶层安全协议管理您的资产。",
-                wp: "<h2>1. 项目理念</h2><p>Bitrium 是一场数字革命。我们致力于让每台手机都成为区块链节点。</p><h2>2. 基础设施</h2><p>钱包、支付网关和去中心化云存储。</p><h3>路线图 Q4</h3><p>在顶级交易所 (ByBit, OKX) 上市。</p>"
+                feat3Title: "安全钱包", feat3Desc: "使用顶层安全协议管理您的资产。"
             },
             de: {
                 heroTitle: "MINING DER <br><span class='text-cyan-400'>ZUKUNFT</span>",
@@ -130,8 +110,7 @@
                 btnDownload: "APK HERUNTERLADEN",
                 feat1Title: "Öko-Mining", feat1Desc: "Kein Akkuverbrauch. Keine Überhitzung. Cloud-Power.",
                 feat2Title: "Community", feat2Desc: "Erhalten Sie einen +0,10x Boost für jeden Freund.",
-                feat3Title: "Sichere Wallet", feat3Desc: "Verwalten Sie Ihr Vermögen sicher.",
-                wp: "<h2>1. PHILOSOPHIE</h2><p>Bitrium ist eine digitale Revolution. Ihr Smartphone wird zum Netzwerkknoten.</p><h2>2. INFRASTRUKTUR</h2><p>Wallet, Pay-Gateway und Cloud-Speicher.</p><h3>ROADMAP Q4</h3><p>Listing an Tier-1-Börsen (ByBit, OKX).</p>"
+                feat3Title: "Sichere Wallet", feat3Desc: "Verwalten Sie Ihr Vermögen sicher."
             },
             fr: {
                 heroTitle: "MINEZ LE <br><span class='text-cyan-400'>FUTUR</span>",
@@ -139,8 +118,7 @@
                 btnDownload: "TÉLÉCHARGER APK",
                 feat1Title: "Éco-Minage", feat1Desc: "Pas de batterie déchargée. Puissance du cloud.",
                 feat2Title: "Communauté", feat2Desc: "Obtenez un boost de +0,10x par ami.",
-                feat3Title: "Portefeuille", feat3Desc: "Gérez vos actifs avec sécurité.",
-                wp: "<h2>1. PHILOSOPHIE</h2><p>Bitrium est une révolution numérique. Le smartphone devient un nœud du réseau.</p><h2>2. INFRASTRUCTURE</h2><p>Portefeuille, passerelle de paiement et stockage cloud.</p><h3>PLAN Q4</h3><p>Cotation sur les bourses Tier-1 (ByBit, OKX).</p>"
+                feat3Title: "Portefeuille", feat3Desc: "Gérez vos actifs avec sécurité."
             }
         };
 
@@ -157,15 +135,11 @@
             document.getElementById('feat2Desc').innerText = t.feat2Desc;
             document.getElementById('feat3Title').innerText = t.feat3Title;
             document.getElementById('feat3Desc').innerText = t.feat3Desc;
-            document.getElementById('wpBody').innerHTML = t.wp;
         }
 
         switcher.addEventListener('change', (e) => updateContent(e.target.value));
         
-        function openWP() { document.getElementById('wpModal').style.display = 'block'; document.body.style.overflow = 'hidden'; }
-        function closeWP() { document.getElementById('wpModal').style.display = 'none'; document.body.style.overflow = 'auto'; }
-
-        // Set default to English
+        // Initial set
         updateContent('en');
     </script>
 </body>
