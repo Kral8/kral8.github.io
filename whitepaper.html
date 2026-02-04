@@ -3,81 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whitepaper | Bitrium Network Ecosystem</title>
+    <title>Whitepaper | Bitrium Network</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         body { background-color: #050505; color: #e5e5e5; font-family: 'Inter', sans-serif; line-height: 1.8; }
-        .neon-border { border-left: 4px solid #00ffcc; padding-left: 20px; margin: 30px 0; background: rgba(0, 255, 204, 0.05); }
         .gradient-text { background: linear-gradient(45deg, #00ffcc, #0099ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        h2 { font-size: 1.8rem; font-weight: 900; margin-top: 50px; color: #fff; }
+        .neon-border { border-left: 4px solid #00ffcc; padding-left: 20px; margin: 30px 0; background: rgba(0, 255, 204, 0.03); }
+        .glass-nav { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        h2 { font-size: 1.8rem; font-weight: 900; margin-top: 50px; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
         h3 { font-size: 1.3rem; font-weight: 700; margin-top: 30px; color: #00ffcc; }
-        p { margin-bottom: 20px; color: #a3a3a3; }
-        .back-btn { position: fixed; top: 20px; left: 20px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 10px 20px; border-radius: 12px; border: 1px solid #333; z-index: 100; }
+        p { margin-bottom: 15px; color: #a3a3a3; }
+        .roadmap-card { background: rgba(255,255,255,0.02); border: 1px solid #222; padding: 20px; border-radius: 20px; transition: 0.3s; }
+        .roadmap-card:hover { border-color: #00ffcc; background: rgba(0,255,204,0.02); }
     </style>
 </head>
-<body class="p-6 md:p-20">
+<body class="pb-20">
 
-    <a href="index.html" class="back-btn text-sm font-bold hover:border-cyan-500 transition">
-        <i class="fas fa-arrow-left mr-2"></i> BACK TO HOME
-    </a>
+    <nav class="fixed w-full z-50 glass-nav py-4 px-6 flex justify-between items-center">
+        <a href="index.html" class="text-sm font-bold hover:text-cyan-400 transition">
+            <i class="fas fa-arrow-left mr-2"></i> <span id="backBtn">BACK</span>
+        </a>
+        
+        <div class="flex items-center gap-4">
+            <i class="fas fa-globe text-cyan-400"></i>
+            <select id="wpLangSwitcher" class="bg-black border border-zinc-700 text-white text-sm rounded-lg p-1 outline-none focus:border-cyan-500">
+                <option value="en">English</option>
+                <option value="ru">Русский</option>
+            </select>
+        </div>
+    </nav>
 
-    <div class="max-w-4xl mx-auto">
-        <header class="text-center mb-20">
-            <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tighter uppercase">White<span class="gradient-text">paper</span></h1>
-            <p class="text-cyan-400 font-bold tracking-[0.2em]">BITRIUM NETWORK v1.0 | 2026</p>
+    <div class="max-w-4xl mx-auto px-6 pt-32">
+        <header class="text-center mb-16">
+            <h1 class="text-5xl md:text-8xl font-black mb-4 tracking-tighter uppercase">White<span class="gradient-text">paper</span></h1>
+            <p id="wpSubtitle" class="text-cyan-400 font-bold tracking-[0.3em] text-sm">BITRIUM NETWORK v1.0 | 2026</p>
         </header>
 
-        <section id="content">
-            <div class="neon-border py-4">
-                <p class="text-white italic">"The power of a global financial network, optimized for the device in your pocket."</p>
+        <div id="wpContent">
             </div>
 
-            <h2>1. INTRODUCTION</h2>
-            <p>Bitrium Network is not just a cryptocurrency; it is a decentralized infrastructure built for the mobile generation. We aim to solve the accessibility problem in blockchain by turning every smartphone into a functional node of a global ecosystem.</p>
-
-            <h2>2. ECOSYSTEM COMPONENTS</h2>
-            <h3>Bitrium Native Wallet</h3>
-            <p>A high-speed, secure digital vault integrated directly into the app. It supports instant P2P transfers using Unique IDs (UID), bypassing complex wallet addresses and high network fees.</p>
-            
-            <h3>Bitrium Pay Gateway</h3>
-            <p>Bridging the gap between crypto and reality. Bitrium Pay allows merchants to accept BIT tokens with instant conversion, enabling real-world utility from day one.</p>
-
-            <h3>Bitrium Cloud Compute</h3>
-            <p>A decentralized cloud layer that handles mining verification processes without draining the user's local hardware resources (Battery/CPU).</p>
-
-            <h2>3. THE TECHNOLOGY: ECO-MINING</h2>
-            <p>Unlike traditional Proof-of-Work (PoW) which requires massive electricity, Bitrium utilizes <b>Proof of Engagement (PoE)</b>. This algorithm rewards users for maintaining network connectivity and community growth. It is 100% eco-friendly and does not cause device overheating.</p>
-
-            <h2>4. TOKENOMICS & HALVING</h2>
-            <p>To ensure long-term value, Bitrium implements a strict halving schedule. Every time the network reaches a new milestone of active users, the base mining rate is reduced by 50%. This creates scarcity as the ecosystem grows.</p>
-
-            <h2>5. ROADMAP 2026</h2>
-            <div class="grid md:grid-cols-2 gap-8 mt-10">
-                <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800">
-                    <h4 class="text-cyan-400 font-bold mb-2 uppercase">Phase 1: Genesis</h4>
-                    <p class="text-xs">App launch, Global Referral System, Community formation (Target: 100k nodes).</p>
-                </div>
-                <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800">
-                    <h4 class="text-cyan-400 font-bold mb-2 uppercase">Phase 2: Utility</h4>
-                    <p class="text-xs">Wallet Activation, P2P Transfers, Initial DEX Listing (PancakeSwap).</p>
-                </div>
-                <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800">
-                    <h4 class="text-cyan-400 font-bold mb-2 uppercase">Phase 3: Integration</h4>
-                    <p class="text-xs">Bitrium Pay Beta, Merchant Partnerships, Tier-2 Exchange listings.</p>
-                </div>
-                <div class="bg-zinc-900/50 p-6 rounded-2xl border border-zinc-800">
-                    <h4 class="text-cyan-400 font-bold mb-2 uppercase">Phase 4: Moon</h4>
-                    <p class="text-xs">Tier-1 Listings (ByBit, OKX, Binance), Mainnet Transition, Global Ecosystem Maturity.</p>
-                </div>
-            </div>
-
-            <footer class="mt-20 pt-10 border-t border-zinc-800 text-center">
-                <p class="text-sm">© 2026 Bitrium Network. All rights reserved. <br> This document is for informational purposes only.</p>
-            </footer>
-        </section>
+        <footer class="mt-20 pt-10 border-t border-zinc-800 text-center text-sm text-zinc-500">
+            <p>© 2026 Bitrium Network. <span id="footerText">All rights reserved.</span></p>
+        </footer>
     </div>
 
+    <script>
+        const wpTranslations = {
+            en: {
+                backBtn: "BACK TO HOME",
+                footerText: "All rights reserved.",
+                content: `
+                    <div class="neon-border py-4 px-6">
+                        <p class="text-white italic font-medium">"Bitrium is the fuel for a future where technology belongs to people, not corporations."</p>
+                    </div>
+
+                    <h2>1. PROJECT PHILOSOPHY</h2>
+                    <p>Bitrium Network is not just another "shitcoin" or a mining button. It is a digital revolution aimed at bringing the power of blockchain into everyone's pocket. We are building a decentralized infrastructure where a smartphone becomes a full-fledged node of a global financial network.</p>
+
+                    <h2>2. BITRIUM ECOSYSTEM (Infrastructure)</h2>
+                    <p>We don't stop at coin mining. During 2026, a full-fledged environment will be deployed around the BIT token:</p>
+                    
+                    <h3>Bitrium Wallet (Native)</h3>
+                    <p>A next-generation crypto wallet with instant transfers via UID and zero internal network commissions.</p>
+                    
+                    <h3>Bitrium Pay</h3>
+                    <p>Payment gateway for businesses. Ability to accept BIT in online stores and coffee shops.</p>
+
+                    <h3>Bitrium Cloud</h3>
+                    <p>Decentralized data storage operating on network capacities.</p>
+
+                    <h3>Bitrium Launchpad</h3>
+                    <p>Platform for launching new eco-friendly crypto projects.</p>
+
+                    <h2>3. ECO-MINING TECHNOLOGY</h2>
+                    <p>Unlike Bitcoin, our mining does not burn electricity or kill your phone.</p>
+                    <ul class="list-disc ml-6 space-y-2 text-zinc-400">
+                        <li><b>Proof of Engagement (PoE):</b> Rewards are distributed for activity and contribution to community development.</li>
+                        <li><b>Zero Battery Drain:</b> All complex calculations occur in the cloud cluster; the phone only confirms participation.</li>
+                        <li><b>Anti-Bot Protection:</b> Smart algorithms protect against farms and emulators to ensure only real people get coins.</li>
+                    </ul>
+
+                    <h2>4. TOKENOMICS (Rocket Launch)</h2>
+                    <p>We create scarcity that drives the price up:</p>
+                    <div class="space-y-4">
+                        <p><b>Halving:</b> Every 100,000 users, the mining speed drops by 2x. The earlier you join, the more coins you get.</p>
+                        <p><b>Burn Mechanism:</b> 10% of all transaction fees within the ecosystem will be burned forever.</p>
+                        <p><b>Liquidity Pool:</b> A reserve fund to maintain price stability during exchange listings.</p>
+                    </div>
+
+                    <h2>5. ROADMAP</h2>
+                    <div class="grid md:grid-cols-2 gap-4 mt-8">
+                        <div class="roadmap-card">
+                            <h4 class="text-cyan-400 font-bold">Q1 2026: LAUNCH</h4>
+                            <p class="text-xs mt-2">v1.0 App Launch, Referral program (+0.10x boost), Community building (50k miners).</p>
+                        </div>
+                        <div class="roadmap-card">
+                            <h4 class="text-cyan-400 font-bold">Q2 2026: EXPANSION</h4>
+                            <p class="text-xs mt-2">Wallet launch, P2P transfers, First DEX listings (PancakeSwap, Uniswap).</p>
+                        </div>
+                        <div class="roadmap-card">
+                            <h4 class="text-cyan-400 font-bold">Q3 2026: INFRASTRUCTURE</h4>
+                            <p class="text-xs mt-2">Bitrium Pay system, NFT integration, Tier-2 Exchange listings (MEXC, Gate.io).</p>
+                        </div>
+                        <div class="roadmap-card">
+                            <h4 class="text-cyan-400 font-bold">Q4 2026: TO THE MOON</h4>
+                            <p class="text-xs mt-2">Tier-1 Listings (ByBit, OKX), Testnet for developers, Official payment status in partner services.</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-center mt-20">WHY SHOULD YOU JOIN US?</h2>
+                    <p class="text-center italic">The world is changing. Those who mined Bitcoin on PCs in 2010 became millionaires. Those mining Bitrium on smartphones in 2026 are writing history today. Join Bitrium Network. Time's ticking!</p>
+                `
+            },
+            ru: {
+                backBtn: "НА ГЛАВНУЮ",
+                footerText: "Все права защищены.",
+                content: `
+                    <div class="neon-border py-4 px-6">
+                        <p class="text-white italic font-medium">"Bitrium — это топливо для будущего, где технологии принадлежат людям, а не корпорациям."</p>
+                    </div>
+
+                    <h2>1. ФИЛОСОФИЯ ПРОЕКТА</h2>
+                    <p>Bitrium Network — это не очередной «щиткоин» или кнопка для майнинга. Это цифровая революция, цель которой — перенести мощь блокчейна в карман каждого человека. Мы строим децентрализованную инфраструктуру, где смартфон становится полноценным узлом (нодой) глобальной финансовой сети.</p>
+
+                    <h2>2. ЭКОСИСТЕМА BITRIUM</h2>
+                    <p>Мы не останавливаемся на добыче монет. В течение 2026 года вокруг токена BIT будет развернута полноценная среда:</p>
+                    
+                    <h3>Bitrium Wallet (Native)</h3>
+                    <p>Криптокошелек нового поколения с мгновенными переводами по UID и нулевой комиссией внутри сети.</p>
+                    
+                    <h3>Bitrium Pay</h3>
+                    <p>Платежный шлюз для бизнеса. Возможность принимать BIT в онлайн-магазинах и кофейнях.</p>
+
+                    <h3>Bitrium Cloud</h3>
+                    <p>Децентрализованное хранилище данных, работающее на мощностях сети.</p>
+
+                    <h3>Bitrium Launchpad</h3>
+                    <p>Площадка для запуска новых экологичных криптопроектов.</p>
+
+                    <h2>3. ТЕХНОЛОГИЯ ECO-MINING</h2>
+                    <p>В отличие от Bitcoin, наш майнинг не сжигает электричество и не портит ваш телефон.</p>
+                    <ul class="list-disc ml-6 space-y-2 text-zinc-400">
+                        <li><b>Proof of Engagement (PoE):</b> Награда распределяется за активность и вклад в развитие сообщества.</li>
+                        <li><b>Zero Battery Drain:</b> Все вычисления происходят в облаке, телефон лишь подтверждает участие.</li>
+                        <li><b>Anti-Bot Protection:</b> Защита от ферм гарантирует, что монеты получают только реальные люди.</li>
+                    </ul>
+
+                    <h2>4. ТОКЕНОМИКА</h2>
+                    <p>Мы создаем дефицит, который толкает цену вверх:</p>
+                    <div class="space-y-4">
+                        <p><b>Халвинг:</b> Каждые 100,000 пользователей скорость майнинга падает в 2 раза. Чем раньше зашел — тем больше монет.</p>
+                        <p><b>Механизм сжигания:</b> 10% комиссий системы будут сжигаться навсегда.</p>
+                        <p><b>Ликвидность:</b> Резервный фонд для стабильности курса на биржах.</p>
+                    </div>
+
+                    <h2>5. ДОРОЖНАЯ КАРТА</h2>
+                    <div class="grid md:grid-cols-2 gap-4 mt-8">
+                        <div class="roadmap-card">
+                            <h4 class="text-cyan-400 font-bold">Q1 2026: ЗАПУСК</h4>
+                            <p class="text-xs mt-2">Запуск приложения v1.0, Реферальная программа, Сообщество 50к майнеров.</p>
+                        </div>
+                        <div class="roadmap-card">
+                            <h4 class="text-cyan-400 font-bold">Q2 2026: ЭКСПАНСИЯ</h4>
+                            <p class="text-xs mt-2">Запуск кошелька, P2P переводы, Листинг на DEX (PancakeSwap, Uniswap).</p>
+                        </div>
+                        <div class="roadmap-card">
+                            <h4 class="text-cyan-400 font-bold">Q3 2026: ИНФРАСТРУКТУРА</h4>
+                            <p class="text-xs mt-2">Система Bitrium Pay, Интеграция NFT, Листинг на Tier-2 биржах.</p>
+                        </div>
+                        <div class="roadmap-card">
+                            <h4 class="text-cyan-400 font-bold">Q4 2026: ТУ-ЗЕ-МУН</h4>
+                            <p class="text-xs mt-2">Tier-1 Биржи (ByBit, OKX), Запуск Testnet, Официальные платежи в сервисах.</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-center mt-20">ПОЧЕМУ ТЫ ДОЛЖЕН БЫТЬ С НАМИ?</h2>
+                    <p class="text-center italic">Мир меняется. Те, кто майнил BTC в 2010-м, стали миллионерами. Те, кто майнит Bitrium в 2026-м, пишут историю сегодня. Время пошло!</p>
+                `
+            }
+        };
+
+        const langSwitcher = document.getElementById('wpLangSwitcher');
+        
+        function updateWP(lang) {
+            const data = wpTranslations[lang];
+            document.getElementById('backBtn').innerText = data.backBtn;
+            document.getElementById('footerText').innerText = data.footerText;
+            document.getElementById('wpContent').innerHTML = data.content;
+            document.documentElement.lang = lang;
+        }
+
+        langSwitcher.addEventListener('change', (e) => updateWP(e.target.value));
+
+        // Start with English
+        updateWP('en');
+    </script>
 </body>
 </html>
